@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Hero from "../components/Hero";
+import { Link } from "react-router-dom";
+
 
 function Landing() {
   return (
-    <div>Landing</div>
-  )
+    <>
+      <Hero />
+    </>
+  );
 }
 
-export default Landing
+export default Landing;
