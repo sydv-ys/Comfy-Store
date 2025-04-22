@@ -13,7 +13,7 @@ function Error() {
             page not found
           </h1>
           <p className="mt-6 text-lg leading-7">
-            Sorry, we couldn't find the page you are looking for{" "}
+            Sorry, we couldn't find the page you are looking for
           </p>
           <div className="mt-10">
             <Link to="/" className="btn btn-secondary">
@@ -27,7 +27,11 @@ function Error() {
 
   return (
     <main className="grid min-h-[100vh] place-items-center px-8">
-      <h4 className="text-center font-bold text-4xl">there was an error</h4>
+      <h4 className="text-center font-bold text-4xl">there was an error...</h4>
+      <p>{error.status && `Status: ${error.status}`}</p>
+      <p>{error.statusText && `Status Text: ${error.statusText}`}</p>
+      <p>{error.message && `Message: ${error.message}`}</p>
+      <pre>{error.stack || JSON.stringify(error, null, 2)}</pre>
     </main>
   );
 }
