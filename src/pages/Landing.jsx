@@ -1,7 +1,7 @@
 import React from "react";
 import { FeaturedProducts } from "../components";
 import Hero from "../components/Hero";
-import { customFetch } from "../utils";
+import { customFetch } from "../utils/index";
 
 const url = "/products?featured=true";
 

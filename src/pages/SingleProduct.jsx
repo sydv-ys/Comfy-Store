@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import { customFetch, formatPrice, generateAmountOptions } from "../utils";
+import { customFetch, formatPrice, generateAmountOptions } from "../utils/index";
 
 export const loader = async ({ params }) => {
   const response = await customFetch(`/products/${params.id}`);
