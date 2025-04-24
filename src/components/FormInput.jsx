@@ -1,6 +1,6 @@
 import React from "react";
 
-function FormInput({ name, type, label, defaultValue }) {
+function FormInput({ name, type, label, defaultValue, size }) {
   return (
     <div className="form-control ">
       <label className="label">
@@ -10,7 +10,7 @@ function FormInput({ name, type, label, defaultValue }) {
         type={type}
         name={name}
         defaultValue={defaultValue}
-        className="input input-bordered "
+        className={`input input-bordered ${size}`}
       />
     </div>
   );
