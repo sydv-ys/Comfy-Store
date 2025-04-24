@@ -12,7 +12,11 @@ function ProductsContainer() {
   const [layout, setLayout] = useState("grid");
 
   const setActiveStyles = (pattern) => {
-    return `text-xl btn btn-circle btn-sm`;
+    return `text-xl btn btn-circle btn-sm ${
+      pattern === layout
+        ? "btn-primary text-primary-content"
+        : "btn-ghost text-based-content"
+    }`;
   };
 
   return (
@@ -40,8 +44,17 @@ function ProductsContainer() {
         </div>
       </div>
 
-      <ProductsList />
-      <ProductsGrid />
+      <div>
+        {totalProducts === 0 ? (
+          <h5 className="text-2xl mt-16">
+            Sorry, no products matched your search
+          </h5>
+        ) : layout === "grid" ? (
+          <ProductsGrid />
+        ) : (
+          <ProductsList />
+        )}
+      </div>
     </>
   );
 }

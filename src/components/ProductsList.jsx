@@ -4,7 +4,6 @@ import { formatPrice } from "../utils/index";
 
 function ProductsList() {
   const { products } = useLoaderData();
-  console.log("products", products);
 
   return (
     <div className="mt-12 grid gap-y-8 ">

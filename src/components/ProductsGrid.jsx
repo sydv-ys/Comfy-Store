@@ -4,7 +4,6 @@ import { formatPrice } from "../utils/index";
 
 function ProductsGrid() {
   const { products } = useLoaderData();
-console.log('products', products);
 
   return (
     <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
