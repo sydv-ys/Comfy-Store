@@ -1,10 +1,8 @@
-import React from "react";
-
-function FormSelect({ label, name, list, defaultValue, size }) {
+const FormSelect = ({ label, name, list, defaultValue, size }) => {
   return (
-    <div className="form-control">
-      <label htmlFor={name} className="label">
-        <span className="label-text capitalize">{label}</span>
+    <div className='form-control'>
+      <label htmlFor={name} className='label'>
+        <span className='label-text capitalize'>{label}</span>
       </label>
       <select
         name={name}
@@ -22,6 +20,5 @@ function FormSelect({ label, name, list, defaultValue, size }) {
       </select>
     </div>
   );
-}
-
+};
 export default FormSelect;
